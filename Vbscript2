@@ -1,0 +1,1197 @@
+dim a
+a=10
+b=4.5
+msgbox typename(a)
+msgbox typename(b)
+msgbox a
+msgbox b
+b=typename(a)
+msgbox a
+msgbox b
+msgbox typename(b)
+
+
+OUTPUT
+Integer
+Double
+10
+4.5
+10
+Integer
+String
+
+*********************************************************************************************************************
+m a
+a=1000000000
+msgbox typename(a)
+a=12.5
+msgbox typename(a)
+a=true
+msgbox typename(a)
+a=null
+msgbox typename(a)
+a=#30/04/1985#
+msgbox typename(a)
+
+OUTPUT
+Long
+Double
+boolean
+Null
+Date
+*********************************************************************************************************************
+dim a
+a=2
+b=4
+msgbox a+b
+msgbox a-b
+msgbox a*b
+msgbox a/b
+msgbox b^a
+
+OUTPUT
+6	-2	8	0.5	16
+*********************************************************************************************************************
+
+dim a
+a=10
+b=5
+msgbox a>b
+OUTPUT
+True
+*********************************************************************************************************************
+dim a
+a=5
+b=6
+c=12
+d=15
+msgbox a<b and c<d
+msgbox a<b and c>d
+OUTPUT
+True
+False
+*********************************************************************************************************************
+dim a
+a="Kalpana"
+b="Sha"
+c="C.V.Raman Nagar"
+d="Bangalore"
+z="Fortuna Serenity Apartment"
+msgbox a&b
+msgbox a&" "&b
+msgbox a&vbtab&b
+msgbox a&" & "&b
+msgbox a&vbnewline&z&vbnewline&c&vbnewline&d
+OUTPUT
+KalpanaSha
+Kalpana Sha
+Kalpana Sha
+Kalpana & Sha
+Kalpana
+Fortuna Serenity Apartment
+C.V.Raman Nagar
+Bangalore
+*********************************************************************************************************************
+dim a
+a=true
+msgbox a
+msgbox NOT(a)
+
+OUTPUT
+True
+False
+*********************************************************************************************************************
+dim a,b,c
+a=InputBox("Enter a")
+b=InputBox("Enter b")
+c=a+b
+msgbox c
+msgbox a+b
+msgbox typename(a)
+msgbox typename(b)
+
+100200
+100200
+String
+String
+*********************************************************************************************************************
+dim a,b,c
+a=Cint(InputBox("Enter a"))
+b=Cint(InputBox("Enter b"))
+c=a+b
+msgbox c
+msgbox a+b
+msgbox typename(a)
+msgbox typename(a)
+
+300
+300
+Integer
+Integer
+dim a,b,c
+a="10"
+msgbox typename(a)
+b=cint(a)
+msgbox typename(a)
+msgbox typename(b)
+msgbox a
+msgbox b
+
+String
+Integer
+10
+10
+*********************************************************************************************************************
+dim a,b,c
+a=10
+msgbox typename(a)
+b=cstr(a)
+msgbox typename(b)
+msgbox b
+
+Integer	String	10
+*********************************************************************************************************************
+
+dim a,b,c
+a=1
+msgbox a
+msgbox typename(a)
+b=cbool(a)
+msgbox typename(b)
+msgbox b
+
+1	Integer	Boolean	true
+*********************************************************************************************************************
+dim a,b,c
+a=0
+msgbox a
+msgbox typename(a)
+b=cbool(a)
+msgbox typename(b)
+msgbox b
+
+0 Integer		Boolean		False
+*********************************************************************************************************************
+dim a,b,c
+a="04/30/1985"
+msgbox a
+msgbox typename(a)
+b=cdate(a)
+msgbox typename(b)
+msgbox b
+a=10
+msgbox isnumeric(a)
+
+04/30/1985	String	date	04/30/1985	True
+*********************************************************************************************************************
+a="10"
+msgbox Isnumeric(a)
+a="age.10"
+msgbox Isnumeric(a)
+
+True	False
+*********************************************************************************************************************
+dim a
+msgbox Isempty(a)
+a=10
+msgbox Isempty(a)
+
+True		False
+*********************************************************************************************************************
+dim a
+msgbox Isnull(a)
+a=NULL
+msgbox Isnull(a)
+
+False		True
+*********************************************************************************************************************
+dim a
+a="04/30/2014"
+msgbox Isdate(a)
+a="April,30,2014"
+msgbox Isdate(a)
+
+True	True
+*********************************************************************************************************************
+msgbox date
+msgbox time
+msgbox now
+
+current date	time	date and time
+*********************************************************************************************************************
+msgbox month(#04/30/2014#)			4
+msgbox monthname(4)				April
+msgbox monthname(month(date))		March
+msgbox monthname(1,true)			Jan
+msgbox monthname(1,false)			January
+
+msgbox year(#04/30/2014#)			2014
+
+msgbox weekday(#04/28/2014#)		2
+msgbox weekdayname(7,true)			Sat
+msgbox weekdayname(7,false)			Saturday
+msgbox weekday(#04/28/2014#,4)		6
+
+msgbox hour(time)				1
+msgbox hour(now)				1
+
+msgbox second(time)				50
+msgbox second(now)				51
+
+msgbox day(#04/30/2014#)			30
+*********************************************************************************************************************
+a=dateadd("yyyy",2,#04/30/1985#)
+msgbox a						04/30/1987
+a=dateadd("m",2,#04/30/1985#)
+msgbox a						06/30/1985
+a=dateadd("d",2,#04/30/1985#)
+msgbox a						05/02/1985
+a=dateadd("h",2,time)
+msgbox a						3:31:16 AM
+a=dateadd("yyyy",-2,#04/30/1985#)
+msgbox a						04/30/1983
+a=dateadd("m",-2,#04/30/1985#)
+msgbox a						02/28/1985
+a=dateadd("d",-2,#04/30/1985#)
+msgbox a						04/28/1985
+a=dateadd("h",-2,time)
+msgbox a						12/29/1899 11:32:21 PM
+*********************************************************************************************************************
+Dim age
+age=cint(Inputbox("Enter your Age"))
+If age>0 and age<15 Then
+    msgbox"UnEligible to Vote"
+    Else If age>=15 and age<=59 Then
+        msgbox"U r eligible to vote"
+        else If age>=60 Then
+            msgbox "U r senior citizen don't wait in the queue to Vote"
+            else
+            msgbox "Apply for voter id"
+        End If
+    End If
+End If
+*********************************************************************************************************************
+
+Dim Marks
+Marks=cint(Inputbox("Enter your Marks"))
+If Marks>0 and marks <=49 Then
+    msgbox"Fail"
+    Else If Marks >=50 and marks<=74 Then
+        msgbox"PASS"
+        else If Marks>=75 Then
+            msgbox "Distinction"
+            else
+            msgbox "Invalid Input"
+        End If
+    End If
+End If
+*********************************************************************************************************************
+Dim color
+color=Inputbox("Enter your color codes")
+Select Case color
+    Case "red"
+    msgbox"STOP"
+    Case "YELLOW"
+    msgbox "get ready to GOOO"
+    Case "green"
+    msgbox "GOOO"
+    case else
+    msgbox "Invalid Type"
+End Select
+*********************************************************************************************************************
+Dim color
+colour=Inputbox("Enter your color codes")
+color=lcase(colour)
+Select Case color
+    Case "red","pink"
+    msgbox"STOP"
+    Case "yellow"
+    msgbox "get ready to GOOO"
+    Case "green"
+    msgbox "GOOO"
+    case else
+    msgbox "Invalid Type"
+End Select
+ ********************************************************************************************************************
+       
+
+Dim color
+colour=Inputbox("Enter your color codes"&vblf&"1.RED"&vblf&"2.YELLOW"&vblf&"3.GREEN")
+color=lcase(colour)
+Select Case color
+    Case "red","pink"
+    msgbox"STOP"
+    Case "yellow"
+    msgbox "get ready to GOOO"
+    Case "green"
+    msgbox "GOOO"
+    case else
+    msgbox "Invalid Type"
+End Select
+ ********************************************************************************************************************
+Dim a(5)
+a(0)=10
+a(1)="hi"
+a(2)=a(0)
+a(3)=true
+a(4)=date	
+msgbox a(0)	
+msgbox a(1)
+msgbox a(2)
+msgbox a(3)
+msgbox a(4)			Todays’ date 3/31/2014
+msgbox typename(a(0))	Integer
+msgbox typename(a(1))	String
+msgbox typename(a(2))	Integer
+msgbox typename(a(3))	Boolean        
+msgbox typename(a(4))	Date
+ ********************************************************************************************************************
+Dim a(4,5)
+msgbox ubound(a,1)			4
+msgbox ubound(a,2)			5
+a(0,0)=10
+a(1,1)="hi"
+a(2,2)=50000
+msgbox a(0,0)				10
+msgbox a(1,1)				hi
+msgbox a(2,2)				50000
+msgbox typename(a(0,0))		Integer
+msgbox typename(a(1,1))		String
+msgbox typename(a(2,2))		Long
+********************************************************************************************************************
+Dim a()
+ReDim a(2)
+a(0)=10
+a(1)="hi"
+a(2)=50000
+msgbox a(0)				10
+msgbox a(1)				hi
+msgbox a(2)				50000
+ReDim a(3)
+a(3)=67	
+msgbox a(0)				Blank		
+msgbox a(1) 				Blank
+msgbox a(2) 				Blank
+msgbox a(3)				67
+msgbox typename(a(0))		Empty
+msgbox typename(a(1)) 		Empty
+msgbox typename(a(2)) 		Empty
+msgbox typename(a(3))		67
+********************************************************************************************************************
+Dim a()
+ReDim a(2)
+a(0)=10
+a(1)="hi"
+a(2)=50000
+msgbox a(0)				10
+msgbox a(1)				hi
+msgbox a(2)				50000
+ReDim preserve a(3)
+a(3)=555.777
+msgbox a(0)				10
+msgbox a(1)				hi
+msgbox a(2)				50000
+msgbox a(3)				555.777
+msgbox typename(a(0))		Integer
+msgbox typename(a(1))		String
+msgbox typename(a(2))		Long
+msgbox typename(a(3))		Double
+********************************************************************************************************************
+Dim i
+For i = 1 To 10 Step 1
+    msgbox i
+Next
+    
+12345678910
+********************************************************************************************************************
+Dim i
+For i = 10 To 1 Step -1
+    msgbox i
+Next
+********************************************************************************************************************
+Dim i,var
+    var="   "
+For i = 1 To 10 
+var=var&i
+msgbox var
+Next
+    msgbox var
+
+1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
+123456789
+12345678910
+12345678910
+
+
+
+
+
+
+
+Dim i,var
+    var="   "
+For i = 1 To 10 
+'var=var&":"&i
+'var=var&vbtab&i
+var=var&vbnewline&i
+msgbox var
+Next
+    msgbox var
+Dim i,var
+    var="   "
+For i = 1 To 10 
+'var=var&":"&i
+'var=var&vbtab&i
+var=var&vbnewline&i
+msgbox var
+Next
+    msgbox var
+
+****
+ 
+
+Dim i,var
+    For i = 1 To 4
+    For j = 1 To i Step 1
+        var=var&"*"
+         msgbox var
+           Next
+           var=var&vbnewline
+               msgbox var
+    Next
+    msgbox var
+
+*
+**
+***
+****
+
+Dim i,var 
+n=cint(inputbox("enter value of n","Input reader"))
+For i= 1 To n step 1
+    For j=1 to i step 1
+    var=var&"*"
+        msgbox var
+    Next
+    var=var&vbnewline
+    msgbox var
+Next
+msgbox var
+#####################################################################################
+
+Dim a(2,3)
+a(0,0)=10
+a(0,1)=11
+a(0,2)=12
+a(0,3)=13
+a(1,0)=20
+a(1,1)=21
+a(1,2)=22
+a(1,3)=23
+a(2,0)=30
+a(2,1)=31
+a(2,2)=32
+a(2,3)=33
+For i=0 to ubound(a,1)
+    For j=0 to ubound(a,2)        
+    msgbox a(i,j)
+    Next
+Next
+
+#####################################################################################
+
+Dim a(2,3)
+For i=0 to ubound(a,1)
+    For j=0 to ubound(a,2)    
+a(i,j)=cint(inputbox("enter elements"))
+    Next
+Next
+For i=o to ubound(a,1)
+    For j=0 to ubound(a,2)
+        msgbox a(i,j)
+    Next
+Next
+
+#####################################################################################
+
+Dim a(5)
+For i=0 to ubound(a)
+    a(i)=inputbox("enter elements")
+    Next
+    For i=0 to ubound(a)
+        msgbox a(i)
+    Next
+#####################################################################################
+
+Dim a(5)
+For i=0 to ubound(a)
+    a(i)=inputbox("enter elements &a("&i&")")
+    Next
+    For i=0 to ubound(a)
+        msgbox a(i)
+    Next
+
+#####################################################################################
+i=1
+Do While i<=10
+msgbox i
+i=i+1
+loop
+
+#####################################################################################
+
+i=1
+Do 
+msgbox i
+i=i+1
+Loop While i<=10
+
+#####################################################################################
+
+i=1
+Do until i>=10
+msgbox i
+i=i+1
+Loop 
+msgbox i
+
+12345678910
+
+#####################################################################################
+
+i=1
+Do 
+msgbox i
+i=i+1
+Loop until i<=10
+msgbox i
+
+1	2
+
+i=1
+Do 
+msgbox i
+i=i+1
+Loop until i>10
+msgbox i
+
+12345678910	11
+
+For i = 1 To 10 Step 1
+    msgbox i
+    If i=5 then exit for
+    Next
+
+12345
+
+
+i=1
+While i<=10
+    msgbox i
+    i=i+1
+    wend
+
+12345678910
+
+Dim a(3)
+a(0)=10
+a(1)=20
+a(2)=30
+a(3)=40
+For each i in a
+    msgbox i
+    Next
+
+10	20	30	40
+
+Dim a(3)
+a(0)=10
+a(1)=20
+a(2)=30
+a(3)=40
+For each i in a
+    msgbox i
+    Next
+    For i=0 to 2
+        msgbox a(i)
+    Next
+
+10	20	30	40
+10	20	30	40
+
+Dim a()
+n=cint(inputbox("enter value n"))
+ReDim a(n-1)
+For i=0 to ubound(a) 
+    a(i)=cint(inputbox("enter elements"))
+    Next
+    var=0
+    For i=0 to ubound(a) 
+        var=var+a(i)
+    Next
+    msgbox var
+4
+1	2	3	4	10
+
+str="Annai"
+msgbox len(str)
+'len is predefined function to find the value of string
+
+'Ucase
+'convert any letter to uppercase
+str="annai"
+msgbox ucase(str)
+
+ANNAI
+
+'lcase
+'convert any letter to lowecase
+str="AnnAi"
+msgbox lcase(str)
+
+annai
+
+'ASCII
+'RETRUNS THE ASCII VALUE
+msgbox asc("A")
+msgbox asc("a")
+msgbox asc("apple")
+
+'always takes 1 st character
+
+65	97	97
+
+'chr
+msgbox chr(65)    'A
+msgbox chr(97)    'a
+msgbox chr(32)    'blank
+msgbox "10"&chr(9)&"20"        '10    20
+msgbox asc("    ")            '9
+
+'str reverse
+str="emuser"
+msgbox strreverse(str)    'resume
+
+str="this is vb class"
+msgbox right(str,4)
+msgbox left(str,7)
+
+lass	this is
+
+str="    qspiders    "
+msgbox str                        'qspiders
+msgbox rtrim(str)                'qspiders
+msgbox ltrim(str)                'qspiders
+msgbox trim(str)                'qspiders
+'removes/truncates the right left side spaces
+'trims both and removes
+msgbox len(str)                    '16
+msgbox len(ltrim(str))            '12
+msgbox len(rtrim(str))            '12
+msgbox len(trim(str))            '8
+
+'string compare
+str1="annai"
+str2="annai"
+msgbox strcomp(str1,str2)
+
+str3="a"
+str4="A"
+msgbox strcomp(str3,str4)
+
+1
+
+'Replace
+'used to replace some string to some other string
+
+str="qspiders"
+n=replace(str,"i","I")
+msgbox n
+
+qspIders
+
+str="qspiders"
+n=replace(str,"der","I")
+msgbox n
+
+str="qspiders"
+n=replace(str,"s"," ")
+msgbox n
+
+str="This is VB Script class"
+n=replace(str,"VB","java")
+msgbox n
+
+str="qqspiderss"
+n=replace(str,"s"," ",1,-1)
+msgbox n                    'qq pider default 1,-1 optional parameters
+
+str="qqspiderss"
+n=replace(str,"s","J",5,2)
+msgbox n                    'iserJJ before 5th character it removes replaces 2 occurences of s
+
+'how many characters are there in str
+str="this is VB Script"
+l1=len(str)
+msgbox l1                            '17
+char=inputbox("enter the character to be searched")
+strrep=replace(str,char,"JAVA Script")
+msgbox strrep                        'this is JAVA Script
+l2=len(strrep)                        
+msgbox l2                            '19
+msgbox l2-l1                        '2
+
+
+str="qspiders"
+n=instr(str,"z")
+msgbox n
+'character is not there then it returns zero
+
+str="welcome users"
+If instr(str,"users") <>0 then
+msgbox "Present"
+else
+msgbox"not exists"
+End If
+
+Present
+
+str="welcome users"
+If instr(str,"users") =0 then
+msgbox "Present"
+else
+msgbox"not exists"
+End If
+
+not exists
+
+'compares full string and gives first character
+str="Welcometo Bangalore"
+n=instr(5,str," ")
+msgbox n
+
+'Mid function
+str="this is a vbscript class"
+n=mid(str,13,6)
+msgbox n
+Script
+
+Dim a()
+str="Aurobindo Mira"
+n=len(str)
+msgbox n
+ReDim a(n-10)
+For i=0 to n-10
+    a(i)=mid(str,i+1,3)
+Next
+For each i in a
+    msgbox i
+Next
+    msgbox"first for loop"
+For i=0 to n-10
+    msgbox a(i)
+Next
+
+Output
+14
+Aur
+Uro
+Rob
+Obi
+Bin
+Aur
+Uro
+Rob
+Obi
+Bin
+
+
+count=0
+i=1
+str=inputbox("enter string")
+Do
+    char=mid(str,i,1)
+    msgbox char
+    If char="p" Then
+        count=count+1
+        i=i+1
+        msgbox count
+        msgbox i
+        else
+        i=i+1
+        msgbox count
+        msgbox i
+        
+    End If
+Loop While char<>"t"
+
+
+'split function
+'implicitly declared as array variable..store multiple data
+str="Kalpana Sha Btech"
+msgbox isarray(str)                'false
+a=split(str," ")
+msgbox isarray(a)                'true
+msgbox ubound(a)                '2
+For each i in a 
+    msgbox i                    'kalpana sha Btech
+Next
+
+'Join
+Dim a(2)
+a(0)=10
+a(1)="hi"
+a(2)=true
+var=join(a,":")
+msgbox var
+
+'10;hi;true
+
+'User defined function
+'reusability of the code
+'why we need function
+'function procedure and sub procedure.
+'v syntax
+'sub (subname)(paarmeters)
+'end sub
+'Function(Functionname)(parameters)
+'end function
+
+Sub udf_add(m1,m2)
+    Dim res
+    res=m1+m2
+    msgbox res
+End Sub
+Call udf_add(4,6)
+'sub procedure doesn't return any value at the end of the result
+
+10
+
+Sub display(byval m1,byval m2)
+    msgbox m1        '10
+    msgbox m2        '20
+    m1=m1+1
+    m2=m2+1
+    msgbox m1        '11
+    msgbox m2        '22
+    End Sub
+    
+    a=10
+    b=20
+    msgbox a        '10
+    msgbox b        '20
+    Call display(a,b)
+    msgbox a        '10
+    msgbox b        '20
+################################################################################
+Function udf_add(m1,m2)
+    Dim res
+    res=m1+m2
+    udf_add=res
+    msgbox udf_add            '10
+End Function
+var=udf_add(4,6)
+msgbox var                    '10
+################################################################################
+'class
+'collection of objects;why we need a class?
+'working as a particular set of scenario's
+
+Class stroper
+    Dim str,ptrn
+    Function getlength
+        getlength=len(str)
+    End Function
+    Function m_replace(rep)
+        m_replace=replace(str,ptrn,rep)
+    End Function
+End Class
+Set obj=new stroper
+msgbox typename(obj)        'stroper
+obj.str="mira"
+obj.ptrn="i"
+n=obj.getlength()
+msgbox n                    '4
+var=obj.m_replace("IR")
+msgbox var    
+
+#####################################################################################
+
+
+
+str="kalpana"
+For i = 1 To len(str) Step 1
+temp=temp&left(str,i)&vblf
+next
+msgbox temp
+
+
+*************************************************************************************
+
+
+
+str="kalpana"
+For i = len(str) To 1 Step -1
+temp=temp&mid(str,i,1)
+next
+msgbox temp
+
+*************************************************************************************
+
+
+
+str="kalpana"
+For i = 1 To len(str)  Step 1
+temp=temp&mid(str,i,1)&vblf
+next
+msgbox temp
+
+*************************************************************************************
+
+str="kalpana"
+For i = 1 To len(str)  Step 1
+temp=mid(str,i,1)
+If temp="a" Then
+    count=count+1
+End If
+next
+msgbox count
+
+op 3
+
+*************************************************************************************
+str="kalpana_13418"
+For i = 1 To len(str)  Step 1
+temp=mid(str,i,1)
+If isnumeric(temp) Then
+    empid=empid&temp
+else 
+    empname=empname&temp
+End If
+next
+msgbox empid
+msgbox empname
+
+*************************************************************************************
+str="KALPANA"
+For i = 1 To len(str) Step 1
+    temp=mid(str,i,1)
+    If asc(temp)>=65 and asc(temp)<=90 Then
+    var=var&chr(asc(temp)+32)
+        else
+        var=var&chr(asc(temp)-32)
+        End If
+    Next
+msgbox var
+
+op
+kalpana
+KALPANA
+
+*************************************************************************************
+'was to count the numbers present in the string A1B1C1
+
+str="A1B1C1"
+For i=1 to len(str)
+    temp=mid(str,i,1)
+If isnumeric(temp) Then
+    count=count+1
+    var=var&temp
+    else
+    alph=alph&temp
+End If
+Next
+msgbox "numbers persent in string "&count
+msgbox "Numerals are :"&var
+msgbox "alphabets are:"&alph
+*************************************************************************************
+str="I love my India"
+res=split(str," ")
+For i=ubound(res) To 0 Step -1
+    temp=temp&" "&res(i)
+Next
+msgbox temp
+
+
+*************************************************************************************
+
+str="c:\program files\qspiders\kalpana"
+res=split(str,"\")
+For i=0 To ubound(res) 
+    temp=temp&" "&res(i)
+Next
+msgbox temp
+
+*************************************************************************************
+str="malayalam"
+rstr=strreverse(str)
+If str=rstr Then
+    msgbox "Palindrome"
+    else
+    msgbox "Not a palindrome"
+End If
+*************************************************************************************
+
+
+Dim a(3)
+a(0)="I"
+a(1)="Love"
+a(2)="my"
+a(3)="India"
+msgbox join(a)
+
+*************************************************************************************
+
+str="bangalore"
+msgbox instr(str,"ban")		‘1
+
+*************************************************************************************
+
+str1="apple"
+str2="APPLE"
+msgbox strcomp(str1,str2)		‘1
+
+*************************************************************************************
+'write a function to find the factorial
+
+Function fact(n)
+    fact1=1
+    For i=1 To n Step 1
+        fact1=fact1*i
+    Next
+    fact=fact1
+End Function
+
+a=cint(inputbox("enter the number whose factorial needs to be calculated","FACTORIAL"))
+res=fact(a)
+msgbox res
+
+Output:120
+
+*************************************************************************************
+Function evenodd(n)
+    If n mod 2 = 0  Then
+        temp= "Even number"
+        else
+        temp= "Odd number"
+    End If
+    evenodd=temp
+End Function
+
+a=cint(inputbox("enter number to find even or odd","EVEN ODD"))
+res=evenodd(a)
+msgbox res
+
+*************************************************************************************
+Function biggest(a,b,c)
+    If a>b and a>c Then
+        temp=a&" is biggest of "&b&" and "&c
+        ElseIf b>a and b>c Then
+        temp=b&" is biggest of "&a&" and "&c
+        ElseIf c>a and c>b Then
+        temp=c&" is biggest of "&a&" and "&b
+        else
+        temp=" a,b,c are equal "        
+    End If
+    biggest=temp
+
+End Function
+
+res=biggest(10,20,30)
+msgbox res
+ 
+*************************************************************************************
+Sub add(n1,n2)
+    sum=n1+n2
+    msgbox sum
+End Sub
+Call add(10,20)
+*************************************************************************************
+ 
+Set xl=createobject("excel.application")
+xl.visible=true
+Set wb=xl.Workbooks.open("E:\HP\annai2.xlsx")
+Set sh=wb.Worksheets("sheet1")
+For i = 2 To 4 Step 1
+    For j= 1 To 2 Step 1
+        sh.cells(i,j).value=cint(inputbox("enter n1&n2"))
+    Next
+Next
+For k = 2 To 4 
+    sh.cells(k,3).value=sh.cells(k,1).value+sh.cells(k,2).value
+Next
+wb.Save
+wb.Close
+xl.Quit
+ 
+
+ 
+*************************************************************************************
+Set xl=createobject("excel.application")
+xl.visible=true
+Set wb=xl.Workbooks.open("E:\HP\annai2.xlsx")
+Set sh=wb.Worksheets("sheet1")
+For i = 1 To 1 Step 1
+    For j = 1 To 3 Step 1
+        sh.cells(i,j).value=inputbox("enter headings")
+    Next
+Next
+For i = 2 To 4 Step 1
+    For j= 1 To 2 Step 1
+        sh.cells(i,j).value=cint(inputbox("enter n1&n2"))
+    Next
+Next
+For k = 2 To 4 
+    sh.cells(k,3).value=sh.cells(k,1).value+sh.cells(k,2).value
+Next
+wb.Save
+wb.Close
+xl.Quit
+ 
+
+ 
+Set xl=createobject("excel.application")
+xl.visible=true
+Set wb=xl.Workbooks.open("E:\HP\annai2.xlsx")
+Set sh=wb.Worksheets("sheet1")
+For i = 1 To 1 Step 1
+    For j = 1 To 3 Step 1
+        sh.cells(i,j).value=inputbox("enter headings")
+        sh.cells(i,j).interior.color=vbyellow
+        sh.cells(i,j).font.color=vbgreen
+    Next
+Next
+For i = 2 To 4 Step 1
+    For j= 1 To 2 Step 1
+        sh.cells(i,j).value=cint(inputbox("enter n1&n2"))
+    Next
+Next
+For k = 2 To 4 
+    sh.cells(k,3).value=sh.cells(k,1).value+sh.cells(k,2).value
+Next
+wb.Save
+wb.Close
+xl.Quit
+ 
+
+ 
+ 
+ 
+ 
+ 
+Set fso=createobject("scripting.filesystemobject")
+For i = 1 To 3 Step 1
+    fso.createfolder("E:\test"&i)
+Next
+ 
+
+ 
+ 
+ 
